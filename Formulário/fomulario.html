@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login </title>
+  <link rel="stylesheet" type="text/css" href="Style.css" media="screen" />
+  
+  <!--por @Mateus ferraz-->
+  
+ </head>
+ <body>
+ 
+  <form name="formCadastro" onsubmit="return validarFormulario()" method="post">
+  
+  <div class="imgcontainer">
+    <img src="/avatar.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="nome"><b>Nome de Usuário</b></label>
+    <input type="text" placeholder="Insira seu Nome 10 dígitos  " name="nome"  required>
+
+    <label for="psw"><b>Senha</b></label>
+    <input type="password" placeholder="Insira sua Senha 8 dígitos " name="psw" required>
+    <input type="submit" valuer="Enviar">
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="reset" class="cancelbtn">Cancelar</button>
+  </div>
+
+</form>
+<script>
+  function validarFormulario(){
+      var nomePessoa = document.forms["formCadastro"]["nome"].value;
+      if (nomePessoa == "") {
+          alert("Favor informar o seu nome!");
+          return false;     
+      }
+      else{
+          alert("Seja bem vindo , " + nomePessoa + " !");
+          return true;
+      }
+  }
+</script> 
+  <footer id="rodap">
+    <p>Desenvolvido por @Mateus Ferraz </p>
+      <hr />
+      <p>&copy; 13/11/2022</p>
+  </footer>
+
+</body>
+</html>
